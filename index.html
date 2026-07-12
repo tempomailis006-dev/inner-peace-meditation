@@ -16,42 +16,40 @@
         <!-- Floating particles for ambiance -->
         <div class="particles" id="particles"></div>
 
-        <!-- Banner Section -->
+        <!-- Banner + Audio Overlay -->
         <section class="banner-section">
-            <div class="banner-container">
-                <img src="IMG_1624.JPEG" alt="Banner" class="banner-image" id="banner-img">
-            </div>
-        </section>
+            <img src="IMG_1624.JPEG" alt="Banner" class="banner-image" id="banner-img">
 
-        <!-- Audio Player Section -->
-        <section class="audio-section">
-            <div class="audio-container">
-                <div class="audio-glow"></div>
-                <div class="mandala" id="mandala">
-                    <div class="mandala-ring ring-1"></div>
-                    <div class="mandala-ring ring-2"></div>
-                    <div class="mandala-ring ring-3"></div>
-                    <div class="mandala-core"></div>
-                </div>
-
-                <button class="play-button" id="play-btn" aria-label="Play audio">
-                    <div class="play-button-ring"></div>
-                    <svg class="play-icon" id="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    <svg class="pause-icon hidden" id="pause-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                    </svg>
-                </button>
-
-                <!-- Progress bar -->
-                <div class="progress-container" id="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill"></div>
+            <!-- Audio Player Overlay -->
+            <div class="audio-overlay">
+                <div class="audio-container">
+                    <div class="audio-glow"></div>
+                    <div class="mandala" id="mandala">
+                        <div class="mandala-ring ring-1"></div>
+                        <div class="mandala-ring ring-2"></div>
+                        <div class="mandala-ring ring-3"></div>
+                        <div class="mandala-core"></div>
                     </div>
-                    <div class="progress-time">
-                        <span id="current-time">0:00</span>
-                        <span id="total-time">0:00</span>
+
+                    <button class="play-button" id="play-btn" aria-label="Play audio">
+                        <div class="play-button-ring"></div>
+                        <svg class="play-icon" id="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="pause-icon hidden" id="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Progress bar -->
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-time">
+                            <span id="current-time">0:00</span>
+                            <span id="total-time">0:00</span>
+                        </div>
                     </div>
                 </div>
             </div>

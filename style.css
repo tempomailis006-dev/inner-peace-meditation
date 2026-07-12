@@ -91,40 +91,31 @@ body {
    ============================================ */
 .banner-section {
     width: 100%;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
-}
-
-.banner-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
 }
 
 .banner-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
-    filter: brightness(0.8) saturate(1.2);
-    transition: transform 8s ease;
-}
-
-.banner-container:hover .banner-image {
-    transform: scale(1.03);
 }
 
 /* ============================================
-   AUDIO PLAYER SECTION
+   AUDIO PLAYER OVERLAY
    ============================================ */
-.audio-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--space-xl) var(--space-md);
-    position: relative;
-    z-index: 1;
+.audio-overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .audio-container {
@@ -424,10 +415,6 @@ body {
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
-    .banner-container {
-        height: 100vh;
-    }
-
     .audio-container {
         padding: var(--space-lg) var(--space-md);
     }
@@ -444,11 +431,5 @@ body {
     .play-button {
         width: 70px;
         height: 70px;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner-container {
-        height: 100vh;
     }
 }
