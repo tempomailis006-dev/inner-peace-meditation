@@ -114,37 +114,26 @@ body {
 .audio-container {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    padding: var(--space-xl) var(--space-lg);
-    max-width: 400px;
-    width: 100%;
-    background: var(--bg-card);
-    border: 1px solid rgba(201, 169, 110, 0.1);
-    border-radius: var(--radius-lg);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    width: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(201, 169, 110, 0.15);
+    border-radius: 60px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    overflow: visible;
 }
 
 .audio-glow {
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    opacity: 0.4;
-    pointer-events: none;
+    display: none;
 }
 
-/* Mandala */
+/* Hide mandala in horizontal layout */
 .mandala {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin-bottom: var(--space-lg);
+    display: none;
 }
 
 .mandala-ring {
@@ -213,8 +202,9 @@ body {
 /* Play Button */
 .play-button {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
     border-radius: var(--radius-full);
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
     border: none;
@@ -224,7 +214,6 @@ body {
     justify-content: center;
     color: var(--bg-primary);
     transition: all var(--transition-medium);
-    margin-bottom: var(--space-md);
     z-index: 1;
 }
 
@@ -251,22 +240,21 @@ body {
 }
 
 .play-icon, .pause-icon {
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
 }
 
 /* Progress Bar */
 .progress-container {
-    width: 100%;
-    max-width: 300px;
+    width: 150px;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(10px);
     transition: all var(--transition-medium);
 }
 
 .progress-container.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
 .progress-bar {
