@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find inner peace with guided meditation and calming sounds. Begin your spiritual journey today.">
+    <title>Inner Peace — Guided Meditation & Spiritual Healing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== PHASE 1: CALM PAGE ===== -->
+    <div id="calm-page">
+        <!-- Floating particles for ambiance -->
+        <div class="particles" id="particles"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-glow"></div>
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo-icon">☸</span>
+                    <span class="logo-text">Inner Peace</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Meditations</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <img src="banner.jpg" alt="Serene meditation landscape" class="banner-image" id="banner-img">
+                <div class="banner-overlay">
+                    <h1 class="banner-title">Begin Your Journey to Inner Peace</h1>
+                    <p class="banner-subtitle">Close your eyes. Breathe deeply. Let the universe guide you.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Player Section -->
+        <section class="audio-section">
+            <div class="audio-container">
+                <div class="audio-glow"></div>
+                <div class="mandala" id="mandala">
+                    <div class="mandala-ring ring-1"></div>
+                    <div class="mandala-ring ring-2"></div>
+                    <div class="mandala-ring ring-3"></div>
+                    <div class="mandala-core"></div>
+                </div>
+                <h2 class="audio-title">🕉 Guided Meditation Audio</h2>
+                <p class="audio-description">Press play and allow the sacred sounds to wash over your soul. Find your center.</p>
+                
+                <button class="play-button" id="play-btn" aria-label="Play meditation audio">
+                    <div class="play-button-ring"></div>
+                    <svg class="play-icon" id="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon hidden" id="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <span class="play-label" id="play-label">Tap to Begin</span>
+
+                <!-- Progress bar -->
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-time">
+                        <span id="current-time">0:00</span>
+                        <span id="total-time">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials for authenticity -->
+        <section class="testimonials">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"This meditation changed my life. I feel so calm and centered now."</p>
+                    <span class="testimonial-author">— Priya S.</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I listen to this every morning. The best way to start my day."</p>
+                    <span class="testimonial-author">— Arjun M.</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Absolutely divine! My stress levels dropped after just one session."</p>
+                    <span class="testimonial-author">— Meera K.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Inner Peace · Namaste 🙏</p>
+        </footer>
+
+        <!-- Hidden Audio -->
+        <audio id="meditation-audio" preload="auto">
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- ===== PHASE 2: JUMP SCARE VIDEO (HIDDEN) ===== -->
+    <div id="jumpscare-overlay" class="jumpscare-overlay hidden">
+        <video id="jumpscare-video" preload="auto" playsinline>
+            <source src="jumpscare.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- ===== PHASE 3: CREEPY TEXT (HIDDEN) ===== -->
+    <div id="creepy-phase" class="creepy-phase hidden">
+        <div class="creepy-bg"></div>
+        <!-- Moving text elements will be generated by JS -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
